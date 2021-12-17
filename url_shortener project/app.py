@@ -60,8 +60,8 @@ def bad_request(message):
 
 @app.route('/shorten_url', methods=['POST', 'GET'])
 def shorten_url():
-    """POST endpoint that looks for a supplied string called "url",
-    contained inside a json object. Then validates this url and
+    """endpoint that looks for a supplied string called "url",
+    contained inside a json or HTTP request object. Then validates this url and
     either returns an error response as appropriate, or generates a
     shortened url, stores the shortened url, and then returns it - if valid.
 
